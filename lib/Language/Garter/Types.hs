@@ -75,10 +75,10 @@ data Reg
   | RBP
   | RDI
   | RSI
-  | RDX 
+  | RDX
   | RCX
   | R8
-  | R9 
+  | R9
   | R11
   | R12
   | R13
@@ -431,9 +431,9 @@ isAnf (Prim1 _ e _)    = isImm e
 isAnf (Prim2 _ e e' _) = isImm e && isImm e'
 isAnf (If c t e _)     = isImm c && isAnf t && isAnf e
 isAnf (Let _ e e' _)   = isAnf e && isAnf e'
-isAnf (Tuple es _)     = all isAnf es
-isAnf (GetItem e i _)  = isAnf e && isAnf i
-isAnf (App _ es _)     = all isAnf es
+isAnf (Tuple es _)     = all isImm es
+isAnf (GetItem e i _)  = isImm e && isImm i
+isAnf (App _ es _)     = all isImm es
 
 {-@ measure isImm @-}
 isImm :: Expr a -> Bool
