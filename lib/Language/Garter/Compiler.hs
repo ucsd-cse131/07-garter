@@ -198,7 +198,8 @@ stackVar i = RegOffset i RBP
 --------------------------------------------------------------------------------
 tupleCtor :: Env -> [IExp] -> Ann -> [Instruction]
 tupleCtor env es l 
-  =  tupleReserve l (tupleSize n)
+  =   tupleReserve l (tupleSize n)
+   ++ error "fill this in with allocation code from egg-eater" 
   where
     n = length es
 
