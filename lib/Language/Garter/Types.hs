@@ -515,7 +515,7 @@ data Ext = Src    -- ^ source
          | Log    -- ^ compile and execution log
 
 instance Show Ext where
-  show Src = "egg"
+  show Src = "gtr"
   show Asm = "s"
   show Exe = "run"
   show Res = "result"
