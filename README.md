@@ -12,7 +12,7 @@ is no longer being used.
 
 1. Use the _link_ from the github classroom to create your private clone of the starter code.
 
-2. Do `git clone https://github.com/ucsd-cse131/ucsd-cse131-sp21-07-garter-XYZ` where `XYZ` is your username.
+2. Do `git clone https://github.com/ucsd-cse131/ucsd-cse131-sp22-07-garter-XYZ` where `XYZ` is your username.
 
 3. Link your clone to the "upstream" to get any updates
 
